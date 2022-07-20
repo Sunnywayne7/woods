@@ -1,0 +1,270 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+}
+body{
+  background: #f1f1f1;
+  font-family: Raleway, sans-serif;
+}
+
+.content-wrapper {
+  max-width: 1420px;
+  margin: auto;
+}
+
+.header{
+  padding: 80px;
+  text-align:  center;
+}
+.header h1{
+  font-size: 50px;
+}
+.header p{
+  font-size: 20px;
+  margin-top: 15px;
+}
+.header .sunny{
+  background: black;
+  color: white;
+  padding: 5px;
+}
+.container{
+  display: flex;
+  margin: -20px 20px 20px 20px;
+  flex-direction: column;
+}
+.able2{
+  margin: 30px 0px 30px 0px;
+}
+
+.main-1, .main-2{
+  background: white;
+  margin-bottom: 15px;
+  border: 1px solid white;
+  box-shadow: 5px 10px 12px #888888;
+
+}
+.wood1-image{
+  background-color: grey;
+  height: 250px;
+  background-size: cover;
+}
+.woodie1{
+  background-image: url("wood1.jpg");
+}
+.woodie2{
+  background-image: url("wood2.jpg");
+}
+.main-1 h1,p{
+  margin: 15px;
+  line-height: 1.6;
+  padding: 20px;
+
+}
+.main-1 p{
+  font-size: 12px;
+}
+.july{
+  color: grey;
+}
+.main a{
+  text-decoration: none;
+  color: black;
+  margin: -30px 0px 0px 0px;
+  padding: 10px 20px 10px 20px;
+  border: 1px solid lightgrey;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.main a:hover{
+  background: grey;
+}
+
+.comment{
+  display: flex;
+  justify-content: flex-end;
+}
+.comment p{
+  margin-top: -25px;
+  font-size: 10px;
+  font-weight: bold;
+}
+.comment p:hover{
+  background: lightgrey;
+  cursor: pointer;
+}
+
+.down{
+  padding: 20px;
+}
+.zero{
+  background: black;
+  color: white;
+  padding: 3px 7px 3px 7px;
+
+}
+.aside-1, .aside-2{
+  background-color: white;
+  box-shadow: 3px 3px 7px #888888;
+  margin-top: 30px;
+}
+.aside-1 .person-image{
+    background-repeat: no-repeat;
+    background-size: cover !important;
+  background: grey;
+  height: 300px;
+}
+.aside-1 .person-image{
+  background-image: url("sun.jpg");
+}
+.aside-1 h1,p{
+  margin: 15px;
+  line-height: 1.6;
+  padding: 5px;
+}
+.aside-1 p{
+  font-size: 13px;
+}
+.aside-2 h1 {
+  background: #f1f1f1;
+  padding: 15px;
+  font-size: 20px;
+}
+.aside-2 p, p1{
+  font-size: 15px;
+  padding: 5px;
+}
+.side-image{
+  border-bottom: 1px solid lightgrey;
+  padding: 20px;
+}
+.imge{
+  padding: 10px;
+}
+.desc p{
+  margin-top: -70px;
+  margin-left: 100px;
+}
+.side-image:hover{
+  background: lightgrey;
+  cursor: pointer;
+}
+.aside-3{
+  background-color: white;
+  box-shadow: 3px 5px 10px #888888;
+  margin-top: 20px;
+}
+.top{
+  background: #f1f1f1;
+}
+.top p{
+  padding: 10px;
+  font-size: 20px;
+}
+.tags{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center ;
+}
+.tags p{
+  text-align: center;
+  font-size: 11px;
+  background-color: #f1f1f1;
+  margin-left: -10px;
+  padding: 0px 10px 0px 10px;
+  margin-top: 6px;
+
+}
+
+.tags .suggestionss{
+  background: black;
+  color: white;
+  margin-right: 10px;
+  align-self: center;
+  padding: 0px 10px 0px 10px;
+}
+.tags p:hover{
+  background: lightgrey;
+  cursor: pointer;
+}
+.footer{
+  background: grey;
+  margin-top: 50px;
+  padding: 40px;
+}
+.footer .prev{
+  background-color: lightgrey;
+  color: grey;
+  padding: 20px 30px 20px 30px;
+  margin-left: -20px;
+
+}
+.footer .next{
+  background-color: black;
+  color: white;
+  padding: 20px 30px 20px 30px;
+
+}
+.footer p{
+  color: white;
+  margin-left: -25px;
+  margin-top: 30px;
+}
+.footer a{
+  color: white;
+}
+.footer .next:hover{
+  background: #f1f1f1;
+  color: black;
+  cursor: pointer;
+}
+.footer .prev:hover{
+  cursor: not-allowed;
+}
+@media only screen and (min-width:994px){
+  .container{
+    flex-direction: row;
+
+  }
+  .main{
+    flex-basis: 70%;
+    padding: 10px;
+    margin-left: 5px;
+  }
+  .side{
+    flex-basis: 30%;
+    margin-top: -18px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .aside-2, .aside-3{
+    margin-top: 55px;
+  }
+  .aside-1 .person-image{
+    background: grey;
+    height: 230px;
+    background-size: cover;
+  }
+  .aside-1 .person-image{
+    background-image: url("sun.jpg");
+  }
+  .wood1-image{
+    background-size: cover;
+  }
+  .aside-2 .side-image{
+    padding: 5px;
+  }
+  .aside-3{
+    height: 250px;
+  }
+  .main a{
+    text-decoration: none;
+    color: black;
+    margin: 30px 0px 0px 10px;
+    padding: 15px 30px 15px 30px;
+    border: 1px solid lightgrey;
+    font-weight: bold;
+  }
+
+}

@@ -15,6 +15,22 @@
       <h1>INTO THE WOODS</h1>
       <p>A blog by <span class="sunny">Sunnywayne</span></p>
     </div>
+    <div class="box" id="modal">
+       <div class="inside-box">
+         <a href="javascript:void(0)" id="closeBtn">&times;</a>
+         <h1>We are sorry  &#128546;</h1>
+         <p>More of this article is currently unavailable for now...please kindly check back later thanks..we love you!!<span style="font-size:40px;"> &#128150;</span></p>
+
+       </div>
+    </div>
+
+    <div class="box" id="modal-2">
+       <div class="inside-box">
+         <a href="javascript:void(0)"  id="closeModal">&times;</a>
+         <h1>We are sorry  &#128546;</h1>
+         <p>More of this article is currently unavailable for now...please kindly check back later thanks..we love you!! <span style="font-size:40px;"> &#128150;</span></p>
+       </div>
+    </div>
     <div class="container">
       <!-- main articles -->
       <div class="main">
@@ -31,20 +47,13 @@
           comprises narrow and small xylem componentswith relatively thicker walls. Such a cambium is referred to as late wood or autumn wood.</p>
         </article>
         <div class="down">
-          <a href="javascript:void(0)" onclick="on()">READ MORE &raquo;</a>
+          <a href="javascript:void(0)" id="openBtn">READ MORE &raquo;</a>
 
         <div class="comment">
           <p>Comments <span class="zero">0</span></p>
         </div>
       </div>
-       <div class="box" id="overlay">
-          <div class="inside-box">
-            <a href="javascript:void(0)" onclick="off()">&times;</a>
-            <h1>We are sorry  &#128546;</h1>
-            <p>More of this article is currently unavailable for now...please kindly check back later thanks..we love you!!<span style="font-size:40px;"> &#128150;</span></p>
 
-          </div>
-       </div>
         </div>
         <div class="main-1 able2">
         <div class="wood1-image woodie2"></div>
@@ -59,19 +68,13 @@
           comprises narrow and small xylem componentswith relatively thicker walls. Such a cambium is referred to as late wood or autumn wood.</p>
         </article>
         <div class="down">
-          <a href="javascript:void(0)"  onclick="start()">READ MORE &raquo;</a>
+          <a href="javascript:void(0)" id="openModal">READ MORE &raquo;</a>
 
         <div class="comment">
           <p>Comments <span class="zero">2</span></p>
         </div>
       </div>
-      <div class="box" id="overlay-2">
-         <div class="inside-box">
-           <a href="javascript:void(0)" onclick="stop()">&times;</a>
-           <h1>We are sorry  &#128546;</h1>
-           <p>More of this article is currently unavailable for now...please kindly check back later thanks..we love you!! <span style="font-size:40px;"> &#128150;</span></p>
-         </div>
-      </div>
+
         </div>
       </div>
       <!-- Right side -->
@@ -136,20 +139,48 @@
     </div>
 
     <script type="text/javascript">
-       function on() {
-         document.getElementById('overlay').style.transform = "scale(1)";
-       }
+      var modal = document.getElementById('modal');
+      var openBtn = document.getElementById('openBtn');
+      var closeBtn = document.getElementById('closeBtn');
 
-      function off(){
-        document.getElementById('overlay').style.transform = "scale(0)";
+      openBtn.addEventListener('click', modalOpen);
+      function modalOpen(){
+        modal.style.display = 'block';
       }
 
-       function start() {
-         document.getElementById('overlay-2').style.transform = "scale(1)";
-       }
+      closeBtn.addEventListener('click', modalClose);
+      function modalClose(){
+        modal.style.display = 'none';
+      }
 
-      function stop(){
-        document.getElementById('overlay-2').style.transform = "scale(0)";
+      window.addEventListener('click', outsideClick);
+      function outsideClick(e){
+        if(e.target == modal){
+          modal.style.display = 'none';
+        }
+      }
+    </script>
+
+    <script type="text/javascript">
+      var modal = document.getElementById('modal-2');
+      var openModal = document.getElementById('openModal');
+      var closeModal = document.getElementById('closeModal');
+
+      openModal.addEventListener('click', modalOpen);
+      function modalOpen(){
+        modal.style.display = 'block';
+      }
+
+      closeModal.addEventListener('click', modalClose);
+      function modalClose(){
+        modal.style.display = 'none';
+      }
+
+      window.addEventListener('click', outsideClick);
+      function outsideClick(e){
+        if(e.target == modal-2){
+          modal.style.display = 'none';
+        }
       }
     </script>
   </body>
